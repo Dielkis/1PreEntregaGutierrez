@@ -41,6 +41,8 @@ while (seleccionProductos != 0) {
     seleccionProductos = Number(prompt("Elige el producto que deseas:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n\n Si no desea uno de los productos en promoción, escribe 0"))
 }
 
+let carrito = [];
+
 function cargarUnProducto() {
     const nuevoProducto = new productoAgregado();
     nuevoProducto.nombre = prompt("Escribe el nombre de tu producto: ");
