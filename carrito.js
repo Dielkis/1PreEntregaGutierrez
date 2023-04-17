@@ -17,7 +17,7 @@ function datosUsuario() {
     let nombreUsuario = prompt("Por Favor, ingrese su nombre y apellido.");
     let saludo = alert("Hola! " + nombreUsuario);
     alert(
-      "Antes de realizar tu pedido quisieramos presentarte algunos productos en promoción"
+      "Ademas de nuestra bienvenida, quisieramos presentarte algunos de nuestros produtos en promoción.\nPromoción valida por el mes en curso"
     );
   }
   return;
@@ -63,7 +63,7 @@ function metodoDePago() {
 function seleccionarProducto() {
   let seleccionProductos = Number(
     prompt(
-      "¿Deseas alguno de los productos en promoción?\nTe dejamos la lista a continuación:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n5-Ingresa otro producto \n Si no desea uno de los productos en promoción, escribe 0"
+      "¿Deseas alguno de los productos en promoción?\nTe dejamos la lista a continuación:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n5-Ingresa otro producto \n Si no deseas uno de los productos en promoción, escribe 0"
     )
   );
   while (seleccionProductos >= 0) {
@@ -147,7 +147,7 @@ function seleccionarProducto() {
         break;
       default:
         seleccionProductos = alert(
-          "No seleccionaste un numero que corresponda a un producto, por favor vuelve a intentar"
+          "No seleccionaste un numero que corresponda a las opciones, por favor vuelve a intentar"
         );
     }
   }
