@@ -63,7 +63,7 @@ function metodoDePago() {
 function seleccionarProducto() {
   let seleccionProductos = Number(
     prompt(
-      "¿Deseas alguno de los productos en promoción?\n\n Te dejamos la lista a continuación:\n\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n5-Ingresa otro producto \n\n Si no desea uno de los productos en promoción, escribe 0"
+      "¿Deseas alguno de los productos en promoción?\nTe dejamos la lista a continuación:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n5-Ingresa otro producto \n Si no desea uno de los productos en promoción, escribe 0"
     )
   );
   while (seleccionProductos >= 0) {
