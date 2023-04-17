@@ -3,19 +3,18 @@ let total = 0
 let empieza;
 
 do {
-    empieza = prompt("¿Estas listx para realizar tu pedido?: Ingresa Si").toLowerCase();
+    empieza = prompt("¿Podemos comenzar con tu pedido?: Ingresa Si").toLowerCase();
 
 } while (empieza != "si");
 
 let nombreUsuario = prompt("Por Favor, ingrese su nombre y apellido.");
 let saludo = alert("Hola! " + nombreUsuario);
-alert("Ingrese el numero que corresponda al producto que desea llevar, si deseas salir escribe 0")
-alert("Recuerda que si deseas dejar de agregar productos escribes el numero 0")
+alert("Antes de realizar tu pedido quisieramos presentarte algunos productos en promoción")
 
-let seleccionProductos = Number(prompt("Elige el producto que deseas:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000").toLowerCase());
+let seleccionProductos = Number(prompt("¿Deseas alguno de los productos en promoción?\n\n Te dejamos la lista a continuación:\n\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n\n Si no desea uno de los productos en promoción, escribe 0").toLowerCase());
 
-const cantidad = (cant, precio) => {
-    return cant * precio
+const cantidad = (cantidad, precioPromocional) => {
+    return cantidad * precioPromocional
 }
 
 while (seleccionProductos != 0) {
@@ -39,8 +38,19 @@ while (seleccionProductos != 0) {
         default:
             seleccionProductos = alert("No seleccionaste un numero que corresponda a un producto, por favor vuelve a intentar")
     }
-    seleccionProductos = Number(prompt("Elige el producto que deseas:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000"))
+    seleccionProductos = Number(prompt("Elige el producto que deseas:\n1-Rolineras $3000\n2-Valvulas $1500\n3-Kit de reparación $5000\n4-Catalina de bicicleta $6000\n\n Si no desea uno de los productos en promoción, escribe 0"))
 }
+
+function cargarUnProducto() {
+    const nuevoProducto = new productoAgregado();
+    nuevoProducto.nombre = prompt("Escribe el nombre de tu producto: ");
+    nuevoProducto.cantidad = Number(prompt("Cuantos deseas? "));
+    nuevoProducto.precio = Number(prompt("Que precio tiene? "));
+  
+    carrito.push(nuevoProducto);
+    console.log("Producto agregado al carrito!");
+  }
+
 
 alert("El total de la compra es de: $" + total);
 
@@ -75,4 +85,4 @@ const metodoDePago = () => {
 
 metodoDePago()
 
-alert("GRACIAS POR PREFERIR MOTOS&BIKES\n\nHASTA LA PROXIMA")
+alert("GRACIAS POR PREFERIR MOTOS&BIKES\n\nHASTA LA PROXIMA")                     
